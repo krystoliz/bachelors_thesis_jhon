@@ -16,3 +16,55 @@
 *.fdb_latexmk
 *.fls
 *.synctex.gz
+
+## Core LaTeX auxiliary files
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+## Intermediate documents
+*.dvi
+*.xdv
+*-converted-to.*
+
+## Bibliography files
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+## Build tool auxiliary files
+*.fdb_latexmk
+*.synctex
+*.synctex.gz
+*.pdfsync
+rubber.cache
+latex.out/
+
+## Beamer presentations
+*.nav
+*.snm
+*.vrb
+
+## Other package-specific files
+*.alg
+*.loa
+*.thm
+*.soc
+*.cut
+*.cpt
+*.spl
+*.ent
+*.lox
+*.mf
+*.mp
+*.t[1-9]
