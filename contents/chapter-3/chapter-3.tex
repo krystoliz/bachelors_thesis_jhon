@@ -1,54 +1,87 @@
 \chapter{Metode Penelitian}
 
-Bab ini menjelaskan metode atau cara yang digunakan dalam penelitian ini untuk 
-mencapai maksud dan tujuan seperti yang tertulis dalam sub-bab 1.3 [jika diinginkan, kalian dapat menuliskan Kembali tujuan penelitian yang ingin dicapai di sini].
+Bab ini membahas semua alat dan bahan yang digunakan untuk melaksanakan tugas akhir ini. Alat dan bahan yang digunakan terdiri dari perangkat keras, perangkat lunak, dan data. Alur dan urutan pengerjaan juga dijelaskan di bagian ini.
 
 \section{Alat dan Bahan Tugas akhir (Opsional)}
 
 \subsection{Alat Tugas akhir}
 
-Alat-alat yang digunakan pada tugas akhir ini berupa perangkat keras maupun perangkat lunak sebagai sarana pendukung antara lain. Kemukakan secara detail sesuai dengan kebutuhan tugas akhir dan juga tambahkan spesifikasi minumum sehingga peneliti lain yang hendak melakukan hal yang sama bisa melakukannya :
+\begin{enumerate} 
 
-\begin{enumerate}
-	\item \textit{Notebook} dengan spesifikasi minumum sistem operasi Windows 8, \textit{processor} Intel Core i3 2330M CPU @ 2,2 GHz, memori 4GB DDR3, grafis NVIDIA GeForce GT 610 (4GB), hardisk 500GB. Pada tugas akhir ini digunakan Windows 10, Intel Core i7 4570M CPU, Memori 4GB DDR 3, grafis Intel HD4300. 
-	\item \textit{Smartphone} dengan spesifikasi tipe minimum, OS Android OS v4.1.2 (Jelly Bean),CPU Dual-core 800 MHz, GPU Mali-400, Internal 4 GB, 768 MB RAM. Pada tugas akhir ini digunakan ....
+	\item Perangkat Keras
+	\begin{enumerate}
+	\item Tugas akhir ini dikembangkan dengan \textit{Notebook} HP Pavilion Gaming dengan sistem operasi X, prosesor AMD Ryzen X, RAM sebesar  , kartu grafis NVIDIA GeForce GTX dan SSD NVMe dengan kapasitas 1024GB
+	\item Tugas akhir dijalankan dan diuji dengan Meta Quest 2 dengan sistem operasi Meta berbasis Android, prosesor XR2, resolusi 1832 x 1920 untuk tiap mata, refresh rate hingga 90Hz, RAM 6GB, dan penyimpanan sebesar 128 GB
+	\end{enumerate}
+
+	\item Perangkat Lunak
+	\begin{enumerate}
+		\item [Draw.io](http://Draw.io) untuk pengembangan UML alur pengembangan dan desain sistem
+		\item Microsoft Visual Studio 2022 sebagai IDE platform dan code editor pengembangan aplikasi
+		\item Unity sebagai platform pengembangan aplikasi permainan VR
+		\item OpenXR sebagai library integrasi kontrol VR
+		\item Meta Quest Link untuk menghubungkan laptop dengan VR
+	\end{enumerate}
+	\item \textit Tugas akhir dijalankan dan diuji dengan Meta Quest 2 dengan sistem operasi Meta berbasis Android, prosesor XR2, resolusi 1832 x 1920 untuk tiap mata, refresh rate hingga 90Hz, RAM 6GB, dan penyimpanan sebesar 128 GB
 	\item \textit{Game creation platform} versi 3.3.2 untuk Stencyl dan Construct2.
 	\item CORELDRAW X7, Tiled dan GIMP 2
 \end{enumerate}
 
 \subsection{Bahan Tugas akhir}
 
-Bahan tugas akhir adalah segala sesuatu yang bersifat fisik atau digital yang digunakan untuk kebutuhan tugas akhir. Bahan tugas akhir dapat berupa:
+Bahan yang digunakan untuk Tugas Akhir ini adalah sebagai berikut.
 
 \begin{enumerate}
-	\item Bahan habis pakai. Bahan yang digunakan untuk tugas akhir. Sebagai contoh 
-	mungkin dibutuhkan kertas transparansi, baterai, atau yang lain 
-	\item Bahan yang berupa data atau informasi yang menjadi dataset tugas akhir. Dataset tugas akhir dapat berupa:
-	\begin{itemize}
-		\item Dataset pihak lain yang diperoleh dengan izin atau dalam lisensi yang diizinkan untuk digunakan secara langsung 
-		\item Dataset pihak pertama yang disusun sendiri melalui quisioner, observasi, atau interview 
-		\item Dokumen panduan yang mengacu pada standar, hasil tugas akhir, atau artikel yang disitasi dan digunakan.
-	\end{itemize}
+	\item Model 3 dimensi gedung SGLC FT UGM yang telah dikembangkan oleh tim VR Fakultas Teknik Universitas Gadjah Mada
+	\item Model interior bangunan SGLC oleh AK Studio Art, api oleh VEffects, elevator oleh Nifty Studios, dan pintu oleh Andrey Ferar yang didapat dari Unity Asset Store
+	\item Video panduan keselamatan yang dibuat oleh tim SHE (Safety Health Environment) Fakultas Teknik Universitas Gadjah Mada (nanti diganti video pembelajaran APAR)
+	\item Data kuesioner System Usability Scale (SUS) dan User Experience Questionnaire (UEQ)
 	
 \end{enumerate}
 
 
 
-\section{Metode yang Digunakan}
+\section{Metode Pengembangan yang Digunakan}
 
-Bagian ini membahas metode atau cara yang akan digunakan dalam penelitian, tahapan 
-penerapan metode, dan desain penelitian (misalnya apakah penelitian akan menggunakan 
-eksperimen di Laboratorium atau di lapangan, misalkan saja penelitian biomedis atau 
-penelitian alat ukur hama yang dapat dilakukan di laboratorium ataupun di lapangan, atau menggunakan metode survei (misalnya untuk teknologi Informasi), studi kasus, atau analisis dengan perangkat lunak (ETAP, LTSpice, dst), atau \textit{prototyping} (pembuatan perangkat keras).
-
-Bagian ini juga membahas bagaimana data [akan] dianalisis, apakah dengan membandingkan keluaran beberapa alat ukur, membandingkan dengan standar atau bagaimana.
-
+Pengembangan gamifikasi pelatihan APAR dan \textit{safety awareness} ini dilakukan dengan metode yang telah digunakan pada penelitian-penelitian yang sudah ada sebelumnya. Desain sistem dibuat dengan menggunakan \textit{Activity-Centered Design} yang berfokus pada aktivitas pelatihan APAR dan XX yang ada sekarang. Metode pengembangan \textit{Feature-Driven Development} digunakan untuk mengembangkan aplikasi. Perancangan dengan \textit{Activity-Centered Design} memberikan informasi yang komprehensif mengenai aktivitas pelatihan APAR yang telah ada, langkah pelaksanaan aktivitas, dan kebutuhan penggunaan. Informasi-informasi tersebut kemudian digunakan sebagai dasar identifikasi, perencanaan, dan pemilihan fitur-fitur yang perlu dikembangkan dalam proses \textit{Feature Driven Development}. Pengembangan gamifikasi dilakukan dengan kerangka MDA (\textit{Mechanics, Dynamics, dan Aesthetics}) guna memastikan gamifikasi berfungsi sesuai tujuan dan menarik bagi pengguna.
 \section{Alur Tugas Akhir}
 
-Menguraikan prosedur yang akan digunakan dan jadwal atau alur penyelesaian setiap 
-tahap. Alur penelian ini dapat disajikan dalam bentuk diagram. Diagram dapat disusun dengan aturan yang baik semisal menggunakan \textit{flowchart}. Aturan dan tutorial pembuatan \textit{flowchart} dapat dilihat di \textcolor{blue}{http://ugm.id/flowcharttutorial}. Setelah menggambarkannya, penulis wajib menjelaskan langkah-langkah setiap alur tugas akhir dalam sub bab tersendiri sesuai dengan kebutuhan.
+Tiga tahapan yang akan dilaksanakan untuk mengerjakan Tugas Akhir ini adalah perancangan, pengembangan, dan pengujian. Metode \textit{Activity-centered Design} dengan kerangka gamifikasi \textit{Mechanics, Dynamics, and Aesthetics} digunakan untuk merancang sistem. Pengembangan sistem menggunakan \textit{Feature-driven Development} yang memiliki lima tahapan utama, yaitu: \textit{develop overall model, build features list, plan by feature, design by feature, design by feature},* dan \textit{build by feature}. Sistem kemudian diuji dengan menggunakan \textit{System Usability Scale} (SUS) dan \textit{User Experience Questionnaire} untuk mengevaluasi kenyamanan pengguna saat menggunakan aplikasi. 
 
-\section{Etika, Masalah, dan Keterbatasan Penelitian (Opsional))}
+Setelah pengujian sistem, capaian pembelajaran diuji. Pengujian capaian pembelajaran dilakukan membagi sekumpulan responden menjadi dua kelompok yakni kelompok yang belajar dengan VR dan kelompok yang menggunakan metode tradisional (video pembelajaran APAR). Tiap kelompok respondesn melakukan pembelajaran APAR dengan metode yang telah ditentukan dan kemudian mereka mengerjakan \textit{post test} untuk menguji pengetahuan tiap responden setelah menyelesaikan pembelajaran. Hasil \textit{post test} digunakan sebagai pembanding untuk menguji keberhasilan VR sebagai media pembelajaran. Tahapan alur pengembangan diilustrasikan di diagram yang ada di Gambar XX
+\begin{figure}[h] % 'h' means place it here
+    \centering
+    \includegraphics[width=0.7\textwidth]{sample/diagramalur.drawio.png}
+	
+    \caption{Diagram alur tugas akhir}
+    \label{fig:sample}
+\end{figure}
+
+\subsection{User Persona}
+
+\subsection{Activity-centered Design}
+
+\subsection{Desain Permainan dengan kerangka MDA}
+
+\subsection{\textit{Features List}}
+\subsection{Linimasa Pengembangan}
+\subsection{\textit{Feature Sets}}
+\subsubsection{\textit{Feature set} : Memulai permainan}
+
+\subsubsection{\textit{Feature set} : Mempelajari Penggunaan APAR}
+
+\subsubsection{\textit{Feature set} : Mempraktikkan Penggunaan APAR}
+
+\subsubsection{\textit{Feature set} : Evaluasi Pembelajaran}
+
+\subsubsection{\textit{Feature Set} : Hasil Pembelajaran}
+
+\subsection{\textit{Build by Feature}}
+
+\subsection{Pengujian}
+\subsection{Analisis Hasil Pengujian}
+\section{Etika, Masalah, dan Keterbatasan Penelitian (Opsional)}
 
 Bagian ini membahas pertimbangan etis penelitian dan [potensi] masalah serta
 keterbatasannya. Jika menyangkut penelitian dengan makhluk hidup, maka dibutuhkan adanya \textit{ethical clearance}, di bagian ini hal itu akan dibahas. Demikian juga tentang keterbatasan ataupun masalah yang akan timbul.
+
