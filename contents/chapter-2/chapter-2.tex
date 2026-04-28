@@ -9,35 +9,80 @@ Sebuah artikel yang ditulis Ruggiero et al. melakukan perbadingan antara pelatih
 
 \subsection{Simulasi Api}
 
-Afrian et al. mengadakan sebuah program pelatihan dan simulasi kebakaran di sebuah pabrik kembang api. Program tersebut merupakan Kegiatan Pengabdian Masyarakat yang dibagi menjadi tiga sesi, yaitu sosialisasi, pelatihan pemadaman kebakaran secara tradisional menggunakan karung goni dan Alat Pemadam Api Ringan (APAR).  Evaluasi program dilakukan dengan menggunakan kuesioner pre-test (sebelum sosialisasi) dan post-test (sesudah sosialisasi) yang dianalisis dengan uji statistik Wilcoxon Signed Rank Test. Hasil kalkulasi membuktikan bahwa program ini terbukti efektif dalam meningkatkan pengetahuan pekerja dari 75 menjadi 95.3 \cite{purwanto2023apar}. Namun, metode edukasi pasif seperti ini hanya meningkatkan pengetahuan, bukan kesiapan (\textit{behavioral readiness}) sehingga tidak cukup efektif.
+Afrian et al. mengadakan sebuah program pelatihan dan simulasi kebakaran di sebuah pabrik kembang api. Program tersebut merupakan Kegiatan Pengabdian Masyarakat yang dibagi menjadi tiga sesi, yaitu sosialisasi, pelatihan pemadaman kebakaran secara tradisional menggunakan karung goni dan Alat Pemadam Api Ringan (APAR).  Evaluasi program dilakukan dengan menggunakan kuesioner pre-test (sebelum sosialisasi) dan post-test (sesudah sosialisasi) yang dianalisis dengan uji statistik Wilcoxon Signed Rank Test. Hasil kalkulasi membuktikan bahwa program ini terbukti efektif dalam meningkatkan pengetahuan pekerja dari 75 menjadi 95.3 \cite{purwanto2023apar}. 
 
 Simulasi kebakaran membantu meningkatkan pemahaman, tetapi masih memiliki beberapa kekurangan. Simulasi masih menggunakan api buatan yang tidak identik dengan kebakaran nyata sehingga secara psikologis tidak realistis. Selain itu, metode ini juga sulit untuk direplikasi atau diulang sehingga peserta simulasi yang jarang mengingat kembali akan mudah melupakan yang telah dipelajari. Oleh karena itu, metode VR dapat menjadi alternatif yang lebih efektif untuk pelatihan evakuasi kebakaran karena dapat memberikan pengalaman yang lebih imersif dan realistis, memungkinkan peserta untuk berlatih secara berulang tanpa risiko yang terkait dengan simulasi fisik, dan mempermudah \textit{knowledge acquisition} dan retensi informasi\cite{morelot_virtual_2021}\cite{scorgie_virtual_2024}.
 
+\subsection{Virtual Reality dalam Pelatihan Keselamatan}
+Virtual Reality adalah sebuah pengalaman atau realitas yang disimulasikan dengan menggunakan Head-Mounted Displays (HMD) dan \textit{pose tracking} untuk memberikan efek imersif dunia virtual terhadap penggunanya. Oleh karena itu, perangkat VR dapat mendeteksi gerakan kepala pemain sehingga karakter dalam permainan VR seolah bergerak sesuai gerakan kepala pemain. Teknologi VR sudah banyak diterapkan di berbagai bidang, mulai dari pelatihan operasi medis dan pengobatan kesehatan mental, pembuatan lingkungan pembelajaran yang imersif, hingga peningkatan kualitas proses pelatihan, pemeliharaan, dan desain industri manufaktur\cite{pujiono2024arvr}.
+
+Tren pengembangan VR untuk persiapan bencana juga tidak lagi hanya berfokus pada pembelajaran rute evakuasi, tetapi juga telah berkembang pada simulasi keterampilan teknis seperti penggunaan Alat Pemadam Api Ringan (APAR) secara virtual seperti di \cite{10972825}, yang memungkinkan pengguna melatih memori otot dan prosedur pemadam tanpa risiko fisik. Penelitian tersebut mengembangkan sistem pelatihan yang memungkinkan pengguna melihat tubuh mereka sendiri dan berinteraksi menggunakan tabung pemadam api (APAR) fisik yang terhubung ke sistem VR. Manfaat signifikan dalam realisme pelatihan bisa didapatkan melalui interaksi fisik dengan alat nyata dan visualisasi tubuh pengguna.
+
+Walaupun metode tersebut menawarkan tingkat imersi yang tinggi, ketergantungan pada perangkat keras khusus (APAR fisik yang dimodifikasi) dan bantuan ahli secara langsung membuat sistem sulit diterapkan secara massal dengan biaya terjangkau. Oleh karena itu, penelitian ini bertujuan untuk membuat alternatif yang mengadaptasi konsep \textit{embodied interaction} tersebut menggunakan perangkat VR standar.
+
 \section{Dasar Teori}
 
-Berisi teori-teori yang menjadi dasar solusi atau produk hasil skripsi. Dasar teori pada umumnya diperoleh melalui buku referensi, publikasi tugas akhir, dan informasi web yang dapat dipertanggungjawabkan. Hindari penggunaan dasar teori melalui tautan wikipedia, surat kabar, atau portal berita.
+\subsection{Kebakaran}
 
-\subsection{Pengenalan Aplikasi Permainan}
+- Dikutip dari \textit{glossary of terms} dari NFPA (National Fire Protection Association), kebakaran  (\textit{fire})merupakan suatu reaksi kimia yaitu proses oksidasi yang menghasilkan evolusi cahaya dan panas dengan intensitas yang beragam.  Kebakaran juga didefinisikan sebagai setiap pembakaran yang bersifat merusak dan tidak terkendali, termasuk ledakan-ledakan\cite{nfpa2024glossary}.
 
-Proses pembuatan \textit{game} dimulai dari pembuatan \textit{game design document} dimana 
-dokumen ini akan menjadi landasan pengembangan game tersebut serta menginformasikan gambaran keseluruhan game yang akan dibuat \cite{ferdiana2012agile}. \textcolor{red}{\textit{Catatan: apapun yang diambil dari tulisan orang lain harus disitasi seperti dicontohkan \cite{ferdiana2012agile}.}}
+Kebakaran juga menjadi salah satu bencana yang umumnya terjadi di perkotaan dan dapat berdampak signifikan jika tidak ditindak cepat. Dilansir dari Voice of Indonesia, Dinas Penanggulangan Kebakaran dan Penyelamatan DKI Jakarta mendata sebanyak 951 kasus kebakaran terjadi di Jakarta sejak tanggal 1 Januari 2025 hingga 20 Juli 2025. Peristiwa-peristiwa tersebut telah berdampak pada 2.248 kepala kelurarga dan 8.682 jiwa\cite{voi2025kebakaran}.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=12cm]{contents/chapter-2/gambar-buatan-sendiri.png}
-	\caption[Contoh gambar]{Contoh gambar \cite{lukito2016}}
-	\label{Fig:gambar-buatan-sendiri}
+\subsection{Klasifikasi Api}
+Sebagai usaha pencegahan kebencanaan, ada baiknya mempelajari jenis-jenis kebakaran karena kebakaran memiliki beberap jenis dan beberapa jenis membutuhkan jenis APAR yang berbeda pula. Gambar \ref{fig:klasifikasiapi} menjelaskan jenis dan sumbernya secara singkat.
+
+\begin{figure}[h] % 'h' means place it here
+    \centering
+    \includegraphics[width=0.7\textwidth]{sample/klasifikasiapi.png} % adjust width
+    \caption{Klasifikasi Api Berdasarkan Jenisnya}
+    \label{fig:klasifikasiapi} % unique label for referencing
 \end{figure}
 
+Peraturan Menteri Tenaga Kerja dan Transmigrasi Nomor 04/MEN/1980 mengklasifikasikan kebakaran menjadi empat kelas, yakni kelas A, B, C, dan D\cite{permenaker1980}. 
 
+\begin{itemize}
+	\item Kelas A: Kebakaran yang melibatkan bahan padat seperti kayu, kertas, dan kain. Alat pemadam yang digunakan untuk kelas ini adalah air atau busa.
+	\item Kelas B: Kebakaran yang melibatkan bahan cair atau gas seperti bensin, minyak, dan gas. Alat pemadam yang digunakan untuk kelas ini adalah busa, karbon dioksida (CO2), atau serbuk kimia kering.
+	\item Kelas C: Kebakaran yang melibatkan peralatan listrik yang masih terhubung dengan sumber listrik. Alat pemadam yang digunakan untuk kelas ini adalah karbon dioksida (CO2) atau serbuk kimia kering.
+	\item Kelas D: Kebakaran yang melibatkan logam mudah terbakar seperti magnesium, titanium, dan natrium. Alat pemadam yang digunakan untuk kelas ini adalah serbuk khusus yang dirancang untuk logam tersebut.
+\end{itemize}
 
-\textit{Game design document} adalah sebuah bagian penting dalam pembuatan game baik itu elemen-elemen penyusunnya maupun proses pengembangannya. Game design yang telah dibuat, dijabarkan satu persatu mengenai tahapan dalam pembuatan game dan hasilnya disatukan dalam bentuk dokumentasi \textit{game design document} yang digunakan oleh \textit{developer} sebagai buku petunjuk bagaimana membuat \textit{game} \cite{lukito2016}.
+\subsection{Alat Pemadam Api Ringan {APAR}}
+Alat Pemadam Api Ringan (APAR) sangat penting sebagai langkah penanganan awal sebelum api semakin besar dan sulit dipadamkan. Namun, masih banyak yang menganggap APAR hanya dibutuhkan di fasilitas umum dan belum mengenali jenis-jenisnya. Oleh karena itu, edukasi mengenai APAR dibutuhkan.
 
-Dalam buku \textit{Game Design Essentials} disebutkan \textit{game design document} merupakan metode yang menghubungkan elemen-elemen penyusun \textit{game}, baik itu \textit{art, sound, program, 
-gameplay} sehingga semuanya terdokumentasi menjadi satu dan menjadi acuan bagi para \textit{developer} dalam membuat \textit{game} \cite{wibirama2013dual}. 
+APAR adalah suatu perangkat pemadam api berbentuk tabung dengan bobot maksimum sekitar 16 kg yang dirancang agar mudah digunakan oleh petugas maupun orang awam dalam kondisi darurat. Alat ini berperan penting dalam memadamkan api berskala kecil pada saat awal terjadinya kebakaran. Dengan penanganan cepat menggunakan APAR, potensi penyebaran dapat dicegah sehingga kerusakan dan risiko tidak kian meluas.
 
-\subsection{Dasar Teori Lainnya}
+Ketika kebakaran terjadi, setiap detik berharga. Oleh karena itu, suatu panduan sederhana pengguna APAR sangat diperlukan. PASS adalah Pull, Aim, Squeeze, dan Sweep. Berikut adalah penjelasannya.
+\begin{itemize}
+	\item Pull: Temukan dan tarik pin keamanan di bagian atas APAR. Pin ini berfungsi untuk mencegah penggunaan yang tidak sengaja. Menarik pin akan melepaskan segel pengaman
+	\item Aim : Arahkan nozzle atau selang ke dasar api, bukan ke api itu sendiri. Mengarahkan ke bawah membantu memotong sumber bahan bakar api.
+	\item Squeeze : Tekan pegangan dengan kuat untuk melepaskan media pemadam. Pegang dengan kuat dan siap — beberapa pemadam api mungkin memiliki waktu pelepasan yang singkat (10-20 detik)
+	\item Sweep : Gerakkan nozzle dari sisi ke sisi untuk menutupi area api secara merata. Lanjutkan hingga api padam atau media pemadam habis. Jika api tidak padam, segera evakuasi dan hubungi petugas pemadam kebakaran.
+	\item Tips akhir : Berdiri 1.83–2.44 meter dari api saat memulai. Selalu jaga jalur keluar yang jelas ada di belakang jika evakuasi diperlukan. Periksa manometer tekanan setiap bulan dan periksa kerusakan atau tanggal kadaluwarsa APAR secara berkala.
+\end{itemize}
+Teknik sederhana ini akan diimplementasikan di dalam aplikasi VR yang akan dikembangkan.
 
+\subsection{Virtual Reality}
+Virtual Reality adalah teknologi yang bertujuan mendorong perilaku tertentu pada suatu organisme melalui rangsangan sensorik buatan dan organisme tersebut memiliki sedikit atau bahkan tidak memiliki kesadaran terhadap adanya gangguan dari dunia nyata. Perilaku yang diharapkan dari penggunaan teknologi ini adalah pengalaman yang dialami organisme, seperti terbang, berjalan, atau bersosialisasi dengan organisme lain, yang seluruhnya dirancang oleh pencipta ruang virtual.
+
+Organisme dalam hal ini merujuk pada makhluk hidup yang menggunakan teknologi VR, baik manusia maupun hewan. Rangsangan sensorik buatan berarti satu atau lebih indera organisme digantikan atau ditingkatkan melalui stimulasi yang dihasilkan VR. Ketiadaan kesadaran mengacu pada kondisi ketika organisme, selama menerima rangsangan tersebut, tidak menyadari keberadaan stimulasi buatan dan mempersepsikannya sebagai pengalaman yang alami.
+- Dalam implementasi VR modern, terdapat dua pendekatan utama untuk meningkatkan imersi, yaitu penggunaan layar yang memiliki ruang fisik dan penggunaan Head-Mounted Display (HMD)
+
+Pendekatan penggunaan layar yang mengelilingi ruang fisik menjadi dasar perancangan salah satu sistem VR yang penting, yaitu CAVE (Cave Automatic Virtual Environment). Sistem CAVE pertama kali diperkenalkan oleh para peneliti dari University of Illinois pada tahun 1992. CAVE merupakan sistem VR berbentuk sebuah ruangan tertutup, di mana dinding, langit-langit, dan lantai berfungsi sebagai media proyeksi yang menampilkan visual objek dunia virtual. Untuk meningkatkan tingkat imersi, sistem ini dilengkapi dengan kacamata khusus yang memungkinkan pelacakan gerakan kepala pengguna serta penyajian visual tiga dimensi\cite{cruz-neira_cave_1992}.
+
+Perkembangan teknologi VR modern selanjutnya didorong oleh produksi massal perangkat VR dalam bentuk Head-Mounted Display (HMD), yaitu layar yang dikenakan di kepala pengguna. Konsep awal teknologi HMD diperkenalkan oleh Ivan Sutherland melalui perangkat yang dikenal sebagai *Ultimate Display*. Sistem ini menggunakan layar dua dimensi yang diposisikan secara presisi pada retina pengguna untuk menciptakan ilusi visual tiga dimensi, serta mampu menyesuaikan perspektif tampilan sesuai dengan pergerakan kepala. Pada implementasinya, perangkat ini menggunakan Cathode Ray Tubes (CRT) yang dipasang pada kepala pengguna untuk menampilkan citra visual. Deteksi posisi dan orientasi kepala dilakukan menggunakan sensor ultrasonik yang bekerja secara kontinu. Selain itu, *clipping divider* digunakan untuk membatasi area tampilan agar sesuai dengan posisi mata pengguna \cite{sutherland_head-mounted_1968}.
+
+Salah satu perangkat HMD yang banyak digunakan saat ini adalah Meta Quest 2. Perangkat ini terdiri atas dua komponen utama, yaitu headset dan controller. Headset Meta Quest 2 dilengkapi dengan beberapa komponen pendukung, antara lain:
+
+\begin{itemize}
+	\item Empat kamera yang terletak di bagian atas dan bawah headset untuk mendeteksi posisi headset dan tangan pengguna serta menangkap citra lingkungan sekitar, sebagaimana ditunjukkan pada Gambar 2.1.
+	\item Layar internal yang berfungsi menampilkan dunia virtual.
+	\item Lensa yang membantu pengguna memfokuskan tampilan layar, seperti ditunjukkan pada Gambar 2.2.
+	\item Speaker yang menghasilkan audio dari lingkungan virtual.
+	\item Inertial Measurement Unit (IMU), yang merupakan kombinasi sensor gyroscope untuk mendeteksi orientasi kepala, accelerometer untuk mengukur arah dan kecepatan pergerakan, serta magnetometer yang berfungsi sebagai kompas untuk menentukan orientasi pengguna secara akurat.
+\end{itemize}
+
+Interaksi pengguna dalam Meta Quest 2 difasilitasi oleh dua buah controller, masing-masing digunakan pada tangan kiri dan kanan, sebagaimana ditunjukkan pada Gambar 2.3. Aplikasi pada Meta Quest 2 dapat diprogram untuk menerima berbagai masukan dan menghasilkan keluaran berdasarkan interaksi pengguna melalui controller tersebut. Posisi dan pergerakan controller dideteksi menggunakan kombinasi sensor IMU dan sensor inframerah.
 \section{Analisis Perbandingan Metode}
 
 Di dalam tinjauan pustaka hasil akhirnya adalah analisis secara kualitatif atau pun secara kuantitatif kelebihan dan kekurangan metode jika dikaitkan dengan masalah, batasan-batasan masalah dan solusi yang dinginkan. Analisis kuantitatif tidak wajib teapi mempunyai nilai tambah di dalam tugas akhir saudara. Bagian ini menjelaskan kenapa metode tersebut dipilih dan uraikan dengan lebih jelas metode pelaksanaan tugas akhir yang ingin Anda lakukan. 
