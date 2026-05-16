@@ -51,13 +51,13 @@ Tiga tahapan yang akan dilaksanakan untuk mengerjakan Tugas Akhir ini adalah per
 Setelah pengujian sistem, capaian pembelajaran diuji. Pengujian capaian pembelajaran dilakukan membagi sekumpulan responden menjadi dua kelompok yakni kelompok yang belajar dengan VR dan kelompok yang menggunakan metode tradisional (video pembelajaran APAR). Tiap kelompok respondesn melakukan pembelajaran APAR dengan metode yang telah ditentukan dan kemudian mereka mengerjakan \textit{post test} untuk menguji pengetahuan tiap responden setelah menyelesaikan pembelajaran. Hasil \textit{post test} digunakan sebagai pembanding untuk menguji keberhasilan VR sebagai media pembelajaran. Tahapan alur pengembangan diilustrasikan di diagram yang ada di Gambar~\ref{fig:diagram-alur-tugas-akhir}.
 \begin{figure}[h] % 'h' means place it here
     \centering
-    \includegraphics[width=0.7\textwidth]{sample/diagramalur.drawio.png}
+    \includegraphics[width=0.7\textwidth]{images/flowchartpengembangan.jpg}
 	
-    \caption{Diagram alur tugas akhir}
+    \caption{Diagram alur tugas akhir (TO BE CHANGED)}
     \label{fig:diagram-alur-tugas-akhir}
 \end{figure}
 
-\subsection{User Persona}
+% \subsection{User Persona}
 
 \subsection{Activity-centered Design}
 Metode \textit{Activity-centered Design} digunakan untuk merancang. Aktivitas yang digunakan adalah \textit{fire drill}. \textit{Fire drill} kemudian dibagi menjadi aktivitas-aktivitas yang lebih kecil. Kegiatan-kegiatan tersebut dianalisis dan dijadikan basis untuk tiap level sedemikian sehingga progresi pembelajaran dari level ke level berikutnya dapat dilakukan dengan baik. Hasil perancangan dengan metode \textit{Activity-centered Design} diilustrasikan pada diagram yang ada di Tabel~\ref{tab:scores}.
@@ -65,17 +65,26 @@ Metode \textit{Activity-centered Design} digunakan untuk merancang. Aktivitas ya
 \begin{table}[h!]
 \centering
 \caption{Aktivitas Utama}
-\begin{tabular}{|p{3cm}|p{12cm}|p{2cm}|}
+\begin{tabular}{|p{2cm}|p{12cm}|}
 \hline
 \textbf{ID} & \textbf{Aktivitas Utama}  \\ \hline
 A-01 & Mempelajari jalur evakuasi saat bencana kebakaran  \\ \hline
 A-02 & Mempelajari cara menemukan jalur alternatif saat jalur utama terhalang \\ \hline
 A-03 & Mempelajari cara evakuasi aman dengan menghindari asap \\ \hline
 A-04 & Mempelajari cara menggunakan APAR saat keadaan darurat dan membuat keputusan dengan cepat  \\ \hline
-A-05 & Mempelajari evakuasi yang lebih kompleks dengan menggabungkan A-01 sampai A-04  \\ \hline
 \end{tabular}
 
 \label{tab:scores}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|p{2cm}|p{12cm}|}
+\hline
+
+
+A-05 & Mempelajari evakuasi yang lebih kompleks dengan menggabungkan A-01 sampai A-04  \\ \hline
+\end{tabular}
 \end{table}
 
 % See Table~\ref{tab:scores} for details.
@@ -87,32 +96,120 @@ Rancangan permainan dapat dijelaskan dengan menggunakan kerangka \textit{Mechani
 \begin{table}[h!]
 \centering
 \caption{Kerangka MDA}
-\begin{tabular}{|p{2cm}|p{4cm}|p{4cm}|p{4cm}|}
+\begin{tabular}{|p{3cm}|p{5cm}|p{3cm}|p{3cm}|}
 \hline
 \textbf{Fitur} & \textbf{Mekanika} & \textbf{Dinamika} & \textbf{Estetika} \\ \hline
- Mode Pembelajaran dan Mode Permainan & dsds & Pemain mengikuti instruksi dan petunjuk di model belajar dan menguji kemampuan evakusasi di mode permainan  & Rasa penasaran dan aman saat belajar dan   \\ \hline
- Level dan Progresi Kesulitan & dsds & Mempelajari jalur evakuasi saat bencana kebakaran & Mempelajari jalur evakuasi saat bencana kebakaran \\ \hline
-Lokomosi dan Interaksi dengan Perangkat Pengontrol Meta Quest 2 & dsds & Mempelajari cara evakuasi aman dengan menghindari asap & Mempelajari jalur evakuasi saat bencana kebakaran \\ \hline
-Area Picu (\textit{trigger area}) & dsds & Mempelajari cara menggunakan APAR saat keadaan darurat dan membuat keputusan dengan cepat & Mempelajari jalur evakuasi saat bencana kebakaran  \\ \hline
-Muncul (\textit{spawn}) dan Muncul Kembali (\textit{respawn}) & dsds & Mempelajari evakuasi yang lebih kompleks dengan menggabungkan A-01 sampai A-04 & Mempelajari jalur evakuasi saat bencana kebakaran    \\ \hline
+ Mode Pembelajaran dan Mode Permainan & Mode pembelajaran memberikan panduan langkah demi langkah evakuasi yang aman pada tiap levelnya. Mode permainan memungkinkan pemain untuk mempraktikkan apa yang telah mereka pelajari dengan batasan waktu dan tanpa petunjuk & Pemain mengikuti instruksi dan petunjuk di model belajar dan menguji kemampuan evakuasi di mode permainan  & Rasa penasaran dan aman saat belajar dan tegang di mode permainan  \\ \hline
+ Level dan Progresi Kesulitan & FireDrillVR memiliki enam level berbeda: lima level utama dan satu level khusus APAR. Progresi kesulitan juga meningkat seiring bertambahnya level & Pemain mempelajari strategi evakuasi efektif secara bertahap, dari jalur evakuasi hingga penggunaan APAR & Rasa pencapaian dan kepuasan saat berhasil membuka level berikutnya dan menyelesaikan permainan \\ \hline
+ Lokomosi dan Interaksi dengan Perangkat Pengontrol Meta Quest 2 & Pemain dapat bergerak di dalam permainan dan berinteraksi dengan objek-objek dengan menggunakan perangkat kontroler \textit{Meta Quest 2} & Pemain bereksperimen dalam bergerak dan interaksi dengan menggunakan berbagai tombol di perangkat kontroler & Mempelajari jalur evakuasi saat bencana kebakaran \\ \hline
+
 \end{tabular}
 
 \label{tab:kerangka-mda}
 \end{table}
 
-Dalam permainan FireDrillVR ini, mekanika permainan adalah sebagai berikut.
-\begin{enumerate}
-	\item \textbf{Mode} \\ FireDrillVR memiliki dua mode, yaitu mode pembelajaran dan mode permainan. Mode pembelajaran memberikan panduan langkah demi langkah evakuasi yang aman pada tiap levelnya, sedangkan mode permainan memungkinkan pemain untuk mempraktikkan apa yang telah mereka pelajari dengan batasan waktu dan tanpa petunjuk.
-	\item \textbf{Level} \\ FireDrillVR dikembangkan dengan enam level berbeda: lima level utama dan satu level khusus APAR. Pemain harus menyelesaikan tugas-tugas yang diberikan di setiap level untuk melanjutkan ke level berikutnya. Tiap level memiliki tantangan yang berbeda, seperti menemukan jalur evakuasi, menghindari asap, dan menggunakan APAR. Progresi kesulitan juga meningkat seiring bertambahnya level dengan level terakhir yang menggabungkan semua tantangan dari level sebelumnya dan semakin tinggi levelnya, semakin tinggi lantai yang harus dievakuasi.
-	\item \textbf{Lokomosi dan Interaksi} \\ Pemain dapat bergerak di dalam permainan dengan menggunakan perangkat kontroler \textit{Meta Quest 2}. Perangkat kontroler juga digunakan dalam berinteraksi dengan objek-objek di dalam permainan, seperti menggunakan APAR dan menekan tombol teleportasi.
-	\item \textbf{Area Picu} \\ Beberapa level memiliki area picu yang akan memicu kejadian tertentu, seperti munculnya asap atau penghalang jalur, saat pemain melewati area tersebut. Area picu ini dirancang untuk meningkatkan tantangan dan memberikan pengalaman yang lebih realistis.
-	\item \textbf{Muncul dan Muncul Kembali} \\ Fitur muncul digunakan untuk teleportasi pemain ke lantai lain. Fitur muncul kembali pula digunakan di beberapa level untuk memungkinkan pemain untuk mencoba kembali jika mereka gagal menyelesaikan level. Selain itu, fitur ini juga digunakan untuk mengembalikan pemain ke adegan permainan awal.
-\end{enumerate}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|p{3cm}|p{5cm}|p{3cm}|p{3cm}|}
+\hline
+
+Area Picu (\textit{trigger area}) & Beberapa level memiliki area picu yang akan memicu kejadian tertentu, seperti munculnya asap atau penghalang jalur, saat pemain melewati area tersebut. Area picu ini dirancang untuk meningkatkan tantangan dan memberikan pengalaman yang lebih realistis. & Pemain belajar mengantisipasi kejadian-kejadian tak terduga seperti asap atau penghalang & Rasa terkejut, kewaspadaan, dan realisme  \\ \hline
+Muncul (\textit{spawn}) dan Muncul Kembali (\textit{respawn}) & Fitur muncul digunakan untuk teleportasi pemain ke lantai lain. Fitur muncul kembali pula digunakan di beberapa level untuk memungkinkan pemain untuk mencoba kembali jika mereka gagal menyelesaikan level. Selain itu, fitur ini juga digunakan untuk mengembalikan pemain ke adegan permainan awal. & Pemain menggunakan fitur teleportasi untuk berpindah antar lantai dengan cepat dan mengulang level dengan cepat & Motivasu untuk mencoba kembali dan kepuasan saat berhasil menyelesaikan level \\ \hline
+\end{tabular}
+
+
+\end{table}
+
+
+
+
+
+Analisis di tabel menunjukkan bahwa mekanika fitur yang dirancang menghasilkan dinamika berupa strategi dan kebiasaan pemain dan estetika berupa perasaan yang dirasakan pemain, seperti rasa tegang, kepuasaan, dan imersi. Dengan demikian, kerangka MDA membantu menjelaskan bagaimana desain teknis permainan FireDrillVR berkontribusi pada pengalaman belajar evakuasi yang realistis.
+
 
 \subsection{\textit{Features List}}
+Tiap level di permainan VR ini memuat elemen-elemen penting yang perlu dilatih dalam evakuasi bencana kebakaran. Elemen-elemen penting diambil dari fasilitas-fasilitas pencegah kebakaran yang disyaratkan oleh NFPA (National Fire Protection Association) di NFPA 101: Life Safety Code \cite{NFPA}. Elemen-elemen tersebut kemudian dijadikan fitur yang perlu dikembangkan dalam permainan VR ini. Fitur-fitur tersebut diilustrasikan pada diagram yang ada di Tabel~\ref{tab:features-list}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage[normalem]{ulem}
+% \useunder{\uline}{\ul}{}
+\begin{table}[]
+\caption{Daftar Fitur-Fitur}
+\begin{tabular}{|p{4cm}|p{8cm}|p{2cm}|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Aktivitas Umum}} & \multicolumn{1}{c|}{\textbf{Fitur}} & \multicolumn{1}{c|}{\textbf{ID}} \\ \hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Memulai \\ Permainan\end{tabular}} & Masuk dan menjelajah bangunan SGLC & F-01 \\ \cline{2-3} 
+ & Menekan tombol teleportasi di tiap lantai untuk pindah dari satu lantai ke lantai lain & F-02 \\ \cline{2-3} 
+ & Berbicara dengan NPC di lantai tertentu untuk memulai level tertentu & F-03 \\ \hline
+\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Level 1 :\\ Mempelajari rute\\ evakuasi utama\end{tabular}} & Mengikuti jalur evakuasi berdasarkan penanda cekpoin yang muncul di layar & F-04 \\ \cline{2-3} 
+ & Mencapai tiga cek poin untuk menyelesaikan level & F-05 \\ \hline
+\multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}Level 2 :\\ Mempelajari cara\\ menemukan rute\\ alternatif\end{tabular}} & Mengikuti jalur evakuasi berdasarkan penanda cekpoin yang muncul di layar & F-06 \\ \cline{2-3} 
+ & Memasuki area picu untuk memunculkan halangan & F-07 \\ \cline{2-3} 
+ & Menemukan jalur evakuasi alternatif berdasarkan penanda cek poin baru yang muncul di layar & F-08 \\ \cline{2-3} 
+ & Mencapai tiga cek poin untuk menyelesaikan level & F-09 \\ \hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Level 3 : Mempelajari \\ cara evakuasi aman \\ di tengah asap\end{tabular}} & Mengikuti jalur evakuasi berdasarkan area-area yang tidak tertutup asap & F-10 \\ \cline{2-3} 
+ & Mengurangi HP (\textit{health points}) jika memasuki area berasap & F-11 \\ \cline{2-3} 
+ & Muncul kembali ke titik awal jika HP berkurang hingga nol & F-12 \\ \hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Level APAR : \\ Mempelajari \\ cara menggunakan\\ APAR\end{tabular}} & Memegang handle APAR dengan tombol grip & F-13 \\ \cline{2-3} 
+ & Menyemprot api hingga padam dengan APAR menggunakan tombol trigger & F-14 \\ \cline{2-3} 
+ & Muncul kembali ke titik awal jika HP berkurang hingga nol & F-15 \\ \hline
+ \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Level 4 : Mempelajari \\ cara mengambil \\ keputusan secara cepat\end{tabular}} & Memilih rute tangga utama atau tangga darurat di lantai 9 dan lantai 5 & F-18 \\ \cline{2-3} 
+ & Jika api yang muncul di lantai 7 dan 3 tidak dipadamkan, halangan akan muncul sebelum menuruni tangga dari lantai 6 dan 2 & F-19 \\ \cline{2-3} 
+ & Menemukan jalur evakuasi alternatif jika jalur yang tengah dilalui terhalang & F-20 \\ \hline
+\multirow{2}{6cm}{\begin{tabular}[c]{@{}l@{}}Level 5 : Melatih semua \\ kemampuan evakuasi\end{tabular}} & \multicolumn{1}{c|}{(Level 1 - 4)} & - \\ \cline{2-3} 
+ & Melakukan evakuasi di tengah keramaian NPC & F-21 \\ \hline
+
+\end{tabular}
+\label{tab:features-list}
+\end{table}
+
 \subsection{Linimasa Pengembangan}
-\subsection{\textit{Feature Sets}}
+Linimasa pengembangan dibuat berdasarkan fitur-fitur yang telah diidentifikasi sebelumnya. Fitur-fitur tersebut kemudian dijadwalkan untuk dikembangkan dalam periode waktu tertentu. Linimasa pengembangan ini membantu memastikan bahwa proses pengembangan berjalan dengan teratur dan sesuai dengan rencana yang telah dibuat. Linimasa pengembangan diilustrasikan pada diagram yang ada di Tabel~\ref{tab:linimasa-pengembangan}.
+\begin{table}[h!]
+\caption{Linimasa Pengembangan}
+\begin{tabular}{|p{4cm}|p{8cm}|p{2cm}|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Aktivitas Utama}} & \multicolumn{1}{c|}{\textbf{Fitur}} & \textbf{Tanggal} \\ \hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Memulai \\ Permainan\end{tabular}} & Masuk dan menjelajah bangunan SGLC & \multirow{3}{*}{1-31 Maret} \\ \cline{2-2}
+ & Menekan tombol teleportasi di tiap lantai untuk pindah dari satu lantai ke lantai lain &  \\ \cline{2-2}
+ & Berbicara dengan NPC di lantai tertentu untuk memulai level tertentu &  \\ \hline
+\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Level 1 :\\ Mempelajari rute\\ evakuasi utama\end{tabular}} & Mengikuti jalur evakuasi berdasarkan penanda cekpoin yang muncul di layar & \multirow{2}{*}{1-31 April} \\ \cline{2-2}
+ & Mencapai tiga cek poin untuk menyelesaikan level &  \\ \hline 
+
+\end{tabular}
+\label{tab:linimasa-pengembangan}
+\end{table}
+
+\begin{table}[h!]
+\begin{tabular}{|p{4cm}|p{8cm}|p{2cm}|}
+\hline
+\multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}Level 2 :\\ Mempelajari cara\\ menemukan rute\\ alternatif\end{tabular}} & Mengikuti jalur evakuasi berdasarkan penanda cekpoin yang muncul di layar &  \\ \cline{2-2}
+ & Memasuki area picu untuk memunculkan halangan &  \\ \cline{2-2}
+ & Menemukan jalur evakuasi alternatif berdasarkan penanda cek poin baru yang muncul di layar & \multirow{16}{*}{\centering 1-31 Mei} \\ \cline{2-2}
+ & Mencapai tiga cek poin untuk menyelesaikan level &  \\ \cline{1-2}
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Level 3 : Mempelajari \\ cara evakuasi aman di \\ tengah asap\end{tabular}} & Mengikuti jalur evakuasi berdasarkan area-area yang tidak tertutup asap &  \\ \cline{2-2}
+ & Mengurangi HP (Health Points) jika memasuki area berasap &  \\ \cline{2-2}
+ & Muncul kembali ke titik awal jika HP berkurang hingga nol &  \\ \cline{1-2}
+\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Level APAR : \\ Mempelajari cara \\ menggunakan APAR\end{tabular}} & Memegang handle APAR dengan tombol grip &  \\ \cline{2-2}
+ & Menyemprot api hingga padam dengan APAR menggunakan tombol trigger &  \\ \cline{1-2}
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Level 4 : Mempelajari \\ cara mengambil \\ keputusan secara cepat\end{tabular}} & Memilih rute tangga utama atau tangga darurat di lantai 9 dan lantai 5 &  \\ \cline{2-2}
+ & Jika api yang muncul di lantai 7 dan 3 tidak dipadamkan, halangan akan muncul sebelum menuruni tangga dari lantai 6 dan 2 &  \\ \cline{2-2}
+ & Menemukan jalur evakuasi alternatif jika jalur yang tengah dilalui terhalang &  \\ \cline{1-2}
+\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Level 5 : Melatih semua \\ kemampuan evakuasi\end{tabular}} & \multicolumn{1}{c|}{(Level 1 - 4)} &  \\ \cline{2-2}
+ & Melakukan evakuasi di tengah keramaian NPC &  \\ \hline
+\end{tabular}
+
+\end{table}
+
+\subsection{\textit{Design by Feature}}
+Setelah fitur-fitur yang akan dikembangkan diidentifikasi dan dijadwalkan, tahap selanjutnya adalah merancang fitur-fitur tersebut. Perancangan dilakukan menggunakan metode \textit{Design by Feature}, yaitu pendekatan yang berfokus pada perancangan setiap fitur secara terpisah sebelum diintegrasikan ke dalam sistem secara keseluruhan. Proses perancangan dilakukan dengan menggunakan \textit{Activity Diagram} sebagai representasi alur perilaku sistem.
+
+Setiap \textit{feature set} memiliki cakupan dan mekanisme yang berbeda. Oleh karena itu, setiap diagram dipisahkan berdasarkan kelompok fitur \textit{gameplay} untuk mengurangi kompleksitas diagram serta meningkatkan keterbacaan. Karena setiap level memiliki mekanisme tambahan dan interaksi bersyarat, menggambarkan seluruh fitur dalam satu diagram akan menghasilkan percabangan yang berlebihan dan alur yang saling tumpang tindih.
+
+Dengan pemisahan tersebut, setiap diagram dapat difokuskan pada perilaku tertentu dari sistem sehingga lebih mudah dianalisis dan dipahami. Selain itu, pendekatan ini juga meminimalkan redundansi karena beberapa level memiliki mekanisme evakuasi inti yang sama dan hanya menambahkan fitur-fitur tertentu sebagai pengembangan lebih lanjut. Oleh karena itu, diagram aktivitas yang berorientasi pada fitur memberikan struktur dokumentasi sistem yang lebih skalabel dan lebih mudah untuk dipelihara (\textit{maintainable}).
 \subsubsection{\textit{Feature set} : Memulai permainan}
+
 
 \subsubsection{\textit{Feature set} : Mempelajari Penggunaan APAR}
 
