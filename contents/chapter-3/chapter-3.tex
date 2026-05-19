@@ -46,7 +46,7 @@ Bahan yang digunakan untuk Tugas Akhir ini adalah sebagai berikut.
 Pengembangan gamifikasi pelatihan APAR dan \textit{safety awareness} ini dilakukan dengan metode yang telah digunakan pada penelitian-penelitian yang sudah ada sebelumnya. Desain sistem dibuat dengan menggunakan \textit{Activity-Centered Design} yang berfokus pada aktivitas pelatihan APAR dan XX yang ada sekarang. Metode pengembangan \textit{Feature-Driven Development} digunakan untuk mengembangkan aplikasi. Perancangan dengan \textit{Activity-Centered Design} memberikan informasi yang komprehensif mengenai aktivitas pelatihan APAR yang telah ada, langkah pelaksanaan aktivitas, dan kebutuhan penggunaan. Informasi-informasi tersebut kemudian digunakan sebagai dasar identifikasi, perencanaan, dan pemilihan fitur-fitur yang perlu dikembangkan dalam proses \textit{Feature Driven Development}. Pengembangan gamifikasi dilakukan dengan kerangka MDA (\textit{Mechanics, Dynamics, dan Aesthetics}) guna memastikan gamifikasi berfungsi sesuai tujuan dan menarik bagi pengguna.
 \section{Alur Tugas Akhir}
 
-Tiga tahapan yang akan dilaksanakan untuk mengerjakan Tugas Akhir ini adalah perancangan, pengembangan, dan pengujian. Metode \textit{Activity-centered Design} dengan kerangka gamifikasi \textit{Mechanics, Dynamics, and Aesthetics} digunakan untuk merancang sistem. Pengembangan sistem menggunakan \textit{Feature-driven Development} yang memiliki lima tahapan utama, yaitu: \textit{develop overall model, build features list, plan by feature, design by feature, design by feature},* dan \textit{build by feature}. Sistem kemudian diuji dengan menggunakan \textit{System Usability Scale} (SUS) dan \textit{User Experience Questionnaire} untuk mengevaluasi kenyamanan pengguna saat menggunakan aplikasi. 
+Tiga tahapan h yang akan dilaksanakan untuk mengerjakan Tugas Akhir ini adalah perancangan, pengembangan, dan pengujian. Metode \textit{Activity-centered Design} dengan kerangka gamifikasi \textit{Mechanics, Dynamics, and Aesthetics} digunakan untuk merancang sistem. Pengembangan sistem menggunakan \textit{Feature-driven Development} yang memiliki lima tahapan utama, yaitu: \textit{develop overall model, build features list, plan by feature, design by feature, design by feature},* dan \textit{build by feature}. Sistem kemudian diuji dengan menggunakan \textit{System Usability Scale} (SUS) dan \textit{User Experience Questionnaire} untuk mengevaluasi kenyamanan pengguna saat menggunakan aplikasi. 
 
 Setelah pengujian sistem, capaian pembelajaran diuji. Pengujian capaian pembelajaran dilakukan membagi sekumpulan responden menjadi dua kelompok yakni kelompok yang belajar dengan VR dan kelompok yang menggunakan metode tradisional (video pembelajaran APAR). Tiap kelompok respondesn melakukan pembelajaran APAR dengan metode yang telah ditentukan dan kemudian mereka mengerjakan \textit{post test} untuk menguji pengetahuan tiap responden setelah menyelesaikan pembelajaran. Hasil \textit{post test} digunakan sebagai pembanding untuk menguji keberhasilan VR sebagai media pembelajaran. Tahapan alur pengembangan diilustrasikan di diagram yang ada di Gambar~\ref{fig:diagram-alur-tugas-akhir}.
 \begin{figure}[h] % 'h' means place it here
@@ -208,17 +208,83 @@ Setelah fitur-fitur yang akan dikembangkan diidentifikasi dan dijadwalkan, tahap
 Setiap \textit{feature set} memiliki cakupan dan mekanisme yang berbeda. Oleh karena itu, setiap diagram dipisahkan berdasarkan kelompok fitur \textit{gameplay} untuk mengurangi kompleksitas diagram serta meningkatkan keterbacaan. Karena setiap level memiliki mekanisme tambahan dan interaksi bersyarat, menggambarkan seluruh fitur dalam satu diagram akan menghasilkan percabangan yang berlebihan dan alur yang saling tumpang tindih.
 
 Dengan pemisahan tersebut, setiap diagram dapat difokuskan pada perilaku tertentu dari sistem sehingga lebih mudah dianalisis dan dipahami. Selain itu, pendekatan ini juga meminimalkan redundansi karena beberapa level memiliki mekanisme evakuasi inti yang sama dan hanya menambahkan fitur-fitur tertentu sebagai pengembangan lebih lanjut. Oleh karena itu, diagram aktivitas yang berorientasi pada fitur memberikan struktur dokumentasi sistem yang lebih skalabel dan lebih mudah untuk dipelihara (\textit{maintainable}).
-\subsubsection{\textit{Feature set} : Memulai permainan}
+\subsubsection{\textit{Feature set} : Keseluruhan Permainan}
+\textit{Activity Diagram} di Gambar~\ref{fig:keseluruhan-permainan} menunjukkan alur keseluruhan permainan. Diagram ini menjelaskan fitur yang ada di dalam di semua level permainan memulai permainan, memilih mode pembelajaran atau mode tantangan. Setelah pemain \textit{spawn} di dalam permainan, mereka dapat memilih untuk memulai level dengan memulai dialog dengan NPC di lantai-lantai tertentu. Namun, tidak semua level dapat diakses sejak awal. Level-level tantangan hanya bisa dimainkan setelah level-level tantangan yang lebih rendah diselesaikan. Di setiap level, pemain harus melakukan evakuasi ke luar gedung dengan mendatangi tiap \textit{checkpoint} yang ada.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+\begin{figure}[h] % 'h' means place it here
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/activity diagram skripsi-Overall.jpg} % adjust width
+    \caption{Activity Diagram Permainan secara Keseluruhan}
+    \label{fig:keseluruhan-permainan} % unique label for referencing
+\end{figure}
 
+\subsubsection{\textit{Feature set} : Mode Pembelajaran}
+Tiap level memiliki dua mode, yaitu mode pembelajaran dan mode tantangan. Fitur-fitur dalam mode pembelajaran ditunjukkan di Gambar~\ref{fig:mode-pembelajaran}. Di mode pembelajaran, pemain akan mempelajari langkah-langkah evakuasi yang aman dengan mengikuti petunjuk yang muncul di layar. Selain itu, \textit{stopwatch} juga akan muncul untuk menghitung waktu yang dibutuhkan untuk menyelesaikan level. Setelah memulai level, pemain akan mengikuti jalur evakuasi berdasarkan penanda cekpoin yang muncul di layar. 
+\begin{figure}[h] % 'h' means place it here
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/activity diagram skripsi-Practice Mode.jpg} % adjust width
+    \caption{Activity Diagram Mode Pembelajaran}
+    \label{fig:mode-pembelajaran} % unique label for referencing
+\end{figure}
+\subsubsection{\textit{Feature set} : Mode Tantangan}
+Terlihat di Gambar~\ref{fig:mode-tantangan} bahwa di mode tantangan, pemain akan mempraktikkan apa yang telah mereka pelajari di mode pembelajaran dengan batasan waktu dan tanpa petunjuk lokasi \textit{checkpoint}. Selain itu, pemain juga harus menyelesaikan level dalam batas waktu tertentu. Jika pemain gagal menyelesaikan level dalam batas waktu yang ditentukan, mereka harus mengulang level tersebut dari awal dan \textit{timer} akan dimulai dari nol lagi.
+\begin{figure}[h] % 'h' means place it here
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/activity diagram skripsi-Challenge Mode.jpg} % adjust width
+    \caption{Activity Diagram Mode Tantangan}
+    \label{fig:mode-tantangan} % unique label for referencing
+\end{figure}
+\subsubsection{\textit{Feature set} : Level 1 - Jalur Evakuasi Utama}
+Gambar~\ref{fig:level1} menunjukkan fitur-fitur yang ada di level 1. Di level 1, pemain akan mempelajari jalur evakuasi utama dengan mengikuti jalur evakuasi berdasarkan penanda cekpoin yang muncul di layar. Pemain harus mencapai tiga cek poin untuk menyelesaikan level ini.
 
-\subsubsection{\textit{Feature set} : Mempelajari Penggunaan APAR}
+\begin{figure}[h] % 'h' means place it here
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/activity diagram skripsi-level1.jpg} % adjust width
+    \caption{Activity Diagram Level 1}
+    \label{fig:level1} % unique label for referencing
+\end{figure}
+\subsubsection{\textit{Feature Set} : Level 2 - Cara Menemukan Jalur Evakuasi Alternatif}
+Gambar~\ref{fig:level2} menunjukkan fitur-fitur yang ada di level 2. Di level 2, pemain akan mempelajari cara menemukan jalur evakuasi alternatif dengan mengikuti jalur evakuasi berdasarkan penanda cekpoin yang muncul di layar. Pemain juga harus memasuki area picu untuk memunculkan halangan dan menemukan jalur evakuasi alternatif berdasarkan penanda cek poin baru yang muncul di layar. Pemain harus mencapai tiga cek poin untuk menyelesaikan level ini.
+\begin{figure}[h] % 'h' means place it here
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/activity diagram skripsi-level2.jpg} % adjust width
+    \caption{Activity Diagram Level 2}
+    \label{fig:level2} % unique label for referencing
+\end{figure}
+\subsubsection{\textit{Feature Set} : Level 3 - Cara Evakuasi Aman di Tengah Asap}
+Gambar~\ref{fig:level3} menunjukkan fitur-fitur yang ada di level 3. Di level 3, pemain akan mempelajari cara evakuasi aman dengan menghindari asap dengan mengikuti jalur evakuasi berdasarkan area-area yang tidak tertutup asap. HP (Health Points) pemain akan berkurang jika memasuki area berasap dan \textit{spawn} kembali ke titik awal jika HP berkurang hingga nol.
+\begin{figure}[h] % 'h' means place it here
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/activity diagram skripsi-level 3.jpg} % adjust width
+    \caption{Activity Diagram Level 3}
+    \label{fig:level3} % unique label for referencing
+\end{figure}
+\subsubsection{\textit{Feature Set} : Level APAR - Cara Menggunakan APAR}
+Gambar~\ref{fig:levelAPAR} menunjukkan fitur-fitur yang ada di level APAR. Di level APAR, pemain akan mempelajari cara menggunakan APAR dengan memegang handle APAR dengan tombol grip dan menyemprot api hingga padam dengan APAR menggunakan tombol trigger.
+\begin{figure}[h] % 'h' means place it here
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/activity diagram skripsi-levelAPAR.jpg} % adjust width
+    \caption{Activity Diagram Level APAR}
+    \label{fig:levelAPAR} % unique label for referencing
+\end{figure}
 
-\subsubsection{\textit{Feature set} : Mempraktikkan Penggunaan APAR}
+\subsubsection{\textit{Feature Set} : Level 4 - Cara Mengambil Keputusan dengan Cepat}
+Gambar~\ref{fig:level4} menunjukkan fitur-fitur yang ada di level 4. Di level 4, pemain akan mempelajari cara mengambil keputusan dengan cepat dengan memilih rute tangga utama atau tangga darurat di lantai 9 dan lantai 5. Jika api yang muncul di lantai 7 dan 3 tidak dipadamkan, halangan akan muncul sebelum menuruni tangga ke lantai 6 dan 2. Pemain harus menemukan jalur evakuasi alternatif jika jalur yang tengah dilalui terhalang.
 
-\subsubsection{\textit{Feature set} : Evaluasi Pembelajaran}
+\begin{figure}[h] % 'h' means place it here
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/activity diagram skripsi-level4.jpg} % adjust width
+    \caption{Activity Diagram Level 4}
+    \label{fig:level4} % unique label for referencing
+\end{figure}
 
-\subsubsection{\textit{Feature Set} : Hasil Pembelajaran}
-
+\subsubsection{\textit{Feature Set} : Level 5 - Semua Kemampuan Evakuasi}
+Gambar~\ref{fig:level5} menunjukkan fitur-fitur yang ada di level 5. Di level 5, pemain akan melatih semua kemampuan evakuasi dengan melakukan evakuasi di tengah beberapa NPC yang berlari dan yang diam di tempat. Fitur-fitur yang ada di level 1 sampai level 4 juga akan dimuat di level ini.
+\begin{figure}[h] % 'h' means place it here
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/activity diagram skripsi-level5.jpg} % adjust width
+    \caption{Activity Diagram Level 5}
+    \label{fig:level5} % unique label for referencing
+\end{figure}
 \subsection{\textit{Build by Feature}}
 
 \subsection{Pengujian}
