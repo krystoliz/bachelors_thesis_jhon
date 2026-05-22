@@ -10,21 +10,20 @@ Bab ini membahas semua alat dan bahan yang digunakan untuk melaksanakan tugas ak
 
 	\item Perangkat Keras
 	\begin{enumerate}
-	\item Tugas akhir ini dikembangkan dengan \textit{Notebook} HP Pavilion Gaming dengan sistem operasi X, prosesor AMD Ryzen X, RAM sebesar  , kartu grafis NVIDIA GeForce GTX dan SSD NVMe dengan kapasitas 1024GB
+	\item Tugas akhir ini dikembangkan dengan \textit{Notebook} HP Pavilion Gaming dengan sistem operasi Windows 11, prosesor AMD Ryzen 5 5600H with Radeon Graphics (3.30 GHz), RAM sebesar 16GB , kartu graffis NVIDIA GeForce GTX 1650 (4 GB), AMD Radeon (TM) Graphics (496 MB) dan SSD NVMe dengan kapasitas 1024GB
 	\item Tugas akhir dijalankan dan diuji dengan Meta Quest 2 dengan sistem operasi Meta berbasis Android, prosesor XR2, resolusi 1832 x 1920 untuk tiap mata, refresh rate hingga 90Hz, RAM 6GB, dan penyimpanan sebesar 128 GB
 	\end{enumerate}
 
 	\item Perangkat Lunak
 	\begin{enumerate}
-		\item [Draw.io](http://Draw.io) untuk pengembangan UML alur pengembangan dan desain sistem
+		\item Draw.io (http://Draw.io) untuk pengembangan UML alur pengembangan dan desain sistem
 		\item Microsoft Visual Studio 2022 sebagai IDE platform dan code editor pengembangan aplikasi
 		\item Unity sebagai platform pengembangan aplikasi permainan VR
 		\item OpenXR sebagai library integrasi kontrol VR
 		\item Meta Quest Link untuk menghubungkan laptop dengan VR
 	\end{enumerate}
 	\item \textit Tugas akhir dijalankan dan diuji dengan Meta Quest 2 dengan sistem operasi Meta berbasis Android, prosesor XR2, resolusi 1832 x 1920 untuk tiap mata, refresh rate hingga 90Hz, RAM 6GB, dan penyimpanan sebesar 128 GB
-	\item \textit{Game creation platform} versi 3.3.2 untuk Stencyl dan Construct2.
-	\item CORELDRAW X7, Tiled dan GIMP 2
+	
 \end{enumerate}
 
 \subsection{Bahan Tugas akhir}
@@ -209,7 +208,7 @@ Setiap \textit{feature set} memiliki cakupan dan mekanisme yang berbeda. Oleh ka
 
 Dengan pemisahan tersebut, setiap diagram dapat difokuskan pada perilaku tertentu dari sistem sehingga lebih mudah dianalisis dan dipahami. Selain itu, pendekatan ini juga meminimalkan redundansi karena beberapa level memiliki mekanisme evakuasi inti yang sama dan hanya menambahkan fitur-fitur tertentu sebagai pengembangan lebih lanjut. Oleh karena itu, diagram aktivitas yang berorientasi pada fitur memberikan struktur dokumentasi sistem yang lebih skalabel dan lebih mudah untuk dipelihara (\textit{maintainable}).
 \subsubsection{\textit{Feature set} : Keseluruhan Permainan}
-\textit{Activity Diagram} di Gambar~\ref{fig:keseluruhan-permainan} menunjukkan alur keseluruhan permainan. Diagram ini menjelaskan fitur yang ada di dalam di semua level permainan memulai permainan, memilih mode pembelajaran atau mode tantangan. Setelah pemain \textit{spawn} di dalam permainan, mereka dapat memilih untuk memulai level dengan memulai dialog dengan NPC di lantai-lantai tertentu. Namun, tidak semua level dapat diakses sejak awal. Level-level tantangan hanya bisa dimainkan setelah level-level tantangan yang lebih rendah diselesaikan. Di setiap level, pemain harus melakukan evakuasi ke luar gedung dengan mendatangi tiap \textit{checkpoint} yang ada.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+\textit{Activity Diagram} di Gambar~\ref{fig:keseluruhan-permainan} menunjukkan alur keseluruhan permainan. Diagram ini menjelaskan fitur yang ada di dalam di semua level permainan memulai permainan, memilih mode pembelajaran atau mode tantangan. Setelah pemain \textit{spawn} di dalam permainan, mereka dapat memilih untuk memulai level dengan memulai dialog dengan NPC di lantai-lantai tertentu. Namun, tidak semua level dapat diakses sejak awal. Teks keterangan 'Lakukan level x terlebih dahulu' akan muncul jika pemain mencoba mengakses level yang belum tersedia. Level-level tantangan hanya bisa dimainkan setelah level-level tantangan yang lebih rendah diselesaikan. Di setiap level, pemain harus melakukan evakuasi ke luar gedung dengan mendatangi tiap \textit{checkpoint}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 \begin{figure}[h] % 'h' means place it here
     \centering
     \includegraphics[width=0.7\textwidth]{images/activity diagram skripsi-Overall.jpg} % adjust width
@@ -218,7 +217,7 @@ Dengan pemisahan tersebut, setiap diagram dapat difokuskan pada perilaku tertent
 \end{figure}
 
 \subsubsection{\textit{Feature set} : Mode Pembelajaran}
-Tiap level memiliki dua mode, yaitu mode pembelajaran dan mode tantangan. Fitur-fitur dalam mode pembelajaran ditunjukkan di Gambar~\ref{fig:mode-pembelajaran}. Di mode pembelajaran, pemain akan mempelajari langkah-langkah evakuasi yang aman dengan mengikuti petunjuk yang muncul di layar. Selain itu, \textit{stopwatch} juga akan muncul untuk menghitung waktu yang dibutuhkan untuk menyelesaikan level. Setelah memulai level, pemain akan mengikuti jalur evakuasi berdasarkan penanda cekpoin yang muncul di layar. 
+Tiap level memiliki dua mode, yaitu mode pembelajaran dan mode tantangan. Fitur-fitur dalam mode pembelajaran ditunjukkan di Gambar~\ref{fig:mode-pembelajaran}. Di mode pembelajaran, pemain akan mempelajari langkah-langkah evakuasi yang aman dengan mengikuti petunjuk yang muncul di layar. Selain itu, \textit{stopwatch} juga akan muncul untuk menghitung waktu yang dihabiskan pemain untuk menyelesaikan level. Setelah memulai level, pemain dapat mengikuti jalur evakuasi berdasarkan penanda cekpoin yang muncul di tampilan. 
 \begin{figure}[h] % 'h' means place it here
     \centering
     \includegraphics[width=0.7\textwidth]{images/activity diagram skripsi-Practice Mode.jpg} % adjust width
@@ -286,8 +285,9 @@ Gambar~\ref{fig:level5} menunjukkan fitur-fitur yang ada di level 5. Di level 5,
     \label{fig:level5} % unique label for referencing
 \end{figure}
 \subsection{\textit{Build by Feature}}
-
+Untuk mengimplementasikan semua fitur yang tertera di Tabel~\ref{tab:features-list}, metode \textit{Build by Feature} digunakan. Metode ini merupakan tahapan terakhir dalam proses \textit{Feature-Driven Development} yang berfokus pada pengembangan setiap fitur secara iteratif. Setiap terjadi kegagalan atau \textit{error} pada pengujian fitur, desain dan implementasi akan diperbaiki. Proses pengembangan dilakukan dengan menggunakan bahasa pemrograman C\# di platform Unity 6000.2.15f1 dan Visual Studio 2022. 
 \subsection{Pengujian}
+(VRSQ) 
 \subsection{Analisis Hasil Pengujian}
 \section{Etika, Masalah, dan Keterbatasan Penelitian (Opsional)}
 
