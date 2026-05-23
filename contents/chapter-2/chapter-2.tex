@@ -28,66 +28,100 @@ Walaupun metode tersebut menawarkan tingkat imersi yang tinggi, ketergantungan p
 
 Kebakaran juga menjadi salah satu bencana yang umumnya terjadi di perkotaan dan dapat berdampak signifikan jika tidak ditindak cepat. Dilansir dari Voice of Indonesia, Dinas Penanggulangan Kebakaran dan Penyelamatan DKI Jakarta mendata sebanyak 951 kasus kebakaran terjadi di Jakarta sejak tanggal 1 Januari 2025 hingga 20 Juli 2025. Peristiwa-peristiwa tersebut telah berdampak pada 2.248 kepala kelurarga dan 8.682 jiwa\cite{voi2025kebakaran}.
 
-\subsection{Klasifikasi Api}
-Sebagai usaha pencegahan kebencanaan, ada baiknya mempelajari jenis-jenis kebakaran karena kebakaran memiliki beberap jenis dan beberapa jenis membutuhkan jenis APAR yang berbeda pula. Gambar \ref{fig:klasifikasiapi} menjelaskan jenis dan sumbernya secara singkat.
 
-\begin{figure}[h] % 'h' means place it here
-    \centering
-    \includegraphics[width=0.7\textwidth]{sample/klasifikasiapi.png} % adjust width
-    \caption{Klasifikasi Api Berdasarkan Jenisnya}
-    \label{fig:klasifikasiapi} % unique label for referencing
-\end{figure}
 
-Peraturan Menteri Tenaga Kerja dan Transmigrasi Nomor 04/MEN/1980 mengklasifikasikan kebakaran menjadi empat kelas, yakni kelas A, B, C, dan D\cite{permenaker1980}. 
-
-\begin{itemize}
-	\item Kelas A: Kebakaran yang melibatkan bahan padat seperti kayu, kertas, dan kain. Alat pemadam yang digunakan untuk kelas ini adalah air atau busa.
-	\item Kelas B: Kebakaran yang melibatkan bahan cair atau gas seperti bensin, minyak, dan gas. Alat pemadam yang digunakan untuk kelas ini adalah busa, karbon dioksida (CO2), atau serbuk kimia kering.
-	\item Kelas C: Kebakaran yang melibatkan peralatan listrik yang masih terhubung dengan sumber listrik. Alat pemadam yang digunakan untuk kelas ini adalah karbon dioksida (CO2) atau serbuk kimia kering.
-	\item Kelas D: Kebakaran yang melibatkan logam mudah terbakar seperti magnesium, titanium, dan natrium. Alat pemadam yang digunakan untuk kelas ini adalah serbuk khusus yang dirancang untuk logam tersebut.
-\end{itemize}
-
-\subsection{Alat Pemadam Api Ringan {APAR}}
-Alat Pemadam Api Ringan (APAR) sangat penting sebagai langkah penanganan awal sebelum api semakin besar dan sulit dipadamkan. Namun, masih banyak yang menganggap APAR hanya dibutuhkan di fasilitas umum dan belum mengenali jenis-jenisnya. Oleh karena itu, edukasi mengenai APAR dibutuhkan.
-
-APAR adalah suatu perangkat pemadam api berbentuk tabung dengan bobot maksimum sekitar 16 kg yang dirancang agar mudah digunakan oleh petugas maupun orang awam dalam kondisi darurat. Alat ini berperan penting dalam memadamkan api berskala kecil pada saat awal terjadinya kebakaran. Dengan penanganan cepat menggunakan APAR, potensi penyebaran dapat dicegah sehingga kerusakan dan risiko tidak kian meluas.
-
-Ketika kebakaran terjadi, setiap detik berharga. Oleh karena itu, suatu panduan sederhana pengguna APAR sangat diperlukan. PASS adalah Pull, Aim, Squeeze, dan Sweep. Berikut adalah penjelasannya.
-\begin{itemize}
-	\item Pull: Temukan dan tarik pin keamanan di bagian atas APAR. Pin ini berfungsi untuk mencegah penggunaan yang tidak sengaja. Menarik pin akan melepaskan segel pengaman
-	\item Aim : Arahkan nozzle atau selang ke dasar api, bukan ke api itu sendiri. Mengarahkan ke bawah membantu memotong sumber bahan bakar api.
-	\item Squeeze : Tekan pegangan dengan kuat untuk melepaskan media pemadam. Pegang dengan kuat dan siap — beberapa pemadam api mungkin memiliki waktu pelepasan yang singkat (10-20 detik)
-	\item Sweep : Gerakkan nozzle dari sisi ke sisi untuk menutupi area api secara merata. Lanjutkan hingga api padam atau media pemadam habis. Jika api tidak padam, segera evakuasi dan hubungi petugas pemadam kebakaran.
-	\item Tips akhir : Berdiri 1.83–2.44 meter dari api saat memulai. Selalu jaga jalur keluar yang jelas ada di belakang jika evakuasi diperlukan. Periksa manometer tekanan setiap bulan dan periksa kerusakan atau tanggal kadaluwarsa APAR secara berkala.
-\end{itemize}
-Teknik sederhana ini akan diimplementasikan di dalam aplikasi VR yang akan dikembangkan.
 
 \subsection{Virtual Reality}
 Virtual Reality adalah teknologi yang bertujuan mendorong perilaku tertentu pada suatu organisme melalui rangsangan sensorik buatan dan organisme tersebut memiliki sedikit atau bahkan tidak memiliki kesadaran terhadap adanya gangguan dari dunia nyata. Perilaku yang diharapkan dari penggunaan teknologi ini adalah pengalaman yang dialami organisme, seperti terbang, berjalan, atau bersosialisasi dengan organisme lain, yang seluruhnya dirancang oleh pencipta ruang virtual.
 
 Organisme dalam hal ini merujuk pada makhluk hidup yang menggunakan teknologi VR, baik manusia maupun hewan. Rangsangan sensorik buatan berarti satu atau lebih indera organisme digantikan atau ditingkatkan melalui stimulasi yang dihasilkan VR. Ketiadaan kesadaran mengacu pada kondisi ketika organisme, selama menerima rangsangan tersebut, tidak menyadari keberadaan stimulasi buatan dan mempersepsikannya sebagai pengalaman yang alami.
-- Dalam implementasi VR modern, terdapat dua pendekatan utama untuk meningkatkan imersi, yaitu penggunaan layar yang memiliki ruang fisik dan penggunaan Head-Mounted Display (HMD)
+ Dalam implementasi VR modern, terdapat dua pendekatan utama untuk meningkatkan imersi, yaitu penggunaan layar yang memiliki ruang fisik dan penggunaan Head-Mounted Display (HMD)
 
 Pendekatan penggunaan layar yang mengelilingi ruang fisik menjadi dasar perancangan salah satu sistem VR yang penting, yaitu CAVE (Cave Automatic Virtual Environment). Sistem CAVE pertama kali diperkenalkan oleh para peneliti dari University of Illinois pada tahun 1992. CAVE merupakan sistem VR berbentuk sebuah ruangan tertutup, di mana dinding, langit-langit, dan lantai berfungsi sebagai media proyeksi yang menampilkan visual objek dunia virtual. Untuk meningkatkan tingkat imersi, sistem ini dilengkapi dengan kacamata khusus yang memungkinkan pelacakan gerakan kepala pengguna serta penyajian visual tiga dimensi\cite{cruz-neira_cave_1992}.
 
-Perkembangan teknologi VR modern selanjutnya didorong oleh produksi massal perangkat VR dalam bentuk Head-Mounted Display (HMD), yaitu layar yang dikenakan di kepala pengguna. Konsep awal teknologi HMD diperkenalkan oleh Ivan Sutherland melalui perangkat yang dikenal sebagai *Ultimate Display*. Sistem ini menggunakan layar dua dimensi yang diposisikan secara presisi pada retina pengguna untuk menciptakan ilusi visual tiga dimensi, serta mampu menyesuaikan perspektif tampilan sesuai dengan pergerakan kepala. Pada implementasinya, perangkat ini menggunakan Cathode Ray Tubes (CRT) yang dipasang pada kepala pengguna untuk menampilkan citra visual. Deteksi posisi dan orientasi kepala dilakukan menggunakan sensor ultrasonik yang bekerja secara kontinu. Selain itu, *clipping divider* digunakan untuk membatasi area tampilan agar sesuai dengan posisi mata pengguna \cite{sutherland_head-mounted_1968}.
+Perkembangan teknologi VR modern selanjutnya didorong oleh produksi massal perangkat VR dalam bentuk Head-Mounted Display (HMD), yaitu layar yang dikenakan di kepala pengguna. Konsep awal teknologi HMD diperkenalkan oleh Ivan Sutherland melalui perangkat yang dikenal sebagai \textit{Ultimate Display}. Sistem ini menggunakan layar dua dimensi yang diposisikan secara presisi pada retina pengguna untuk menciptakan ilusi visual tiga dimensi, serta mampu menyesuaikan perspektif tampilan sesuai dengan pergerakan kepala. Pada implementasinya, perangkat ini menggunakan \textit{Cathode Ray Tubes} (CRT) yang dipasang pada kepala pengguna untuk menampilkan citra visual. Deteksi posisi dan orientasi kepala dilakukan menggunakan sensor ultrasonik yang bekerja secara kontinu. Selain itu, \textit{clipping divider} digunakan untuk membatasi area tampilan agar sesuai dengan posisi mata pengguna \cite{sutherland_head-mounted_1968}.
 
-Salah satu perangkat HMD yang banyak digunakan saat ini adalah Meta Quest 2. Perangkat ini terdiri atas dua komponen utama, yaitu headset dan controller. Headset Meta Quest 2 dilengkapi dengan beberapa komponen pendukung, antara lain:
+Salah satu perangkat HMD yang banyak digunakan saat ini adalah Meta Quest 2. Perangkat ini terdiri atas dua komponen utama, yaitu \textit{headset} dan \textit{controller}. Headset Meta Quest 2 dilengkapi dengan beberapa komponen pendukung, antara lain:
 
 \begin{itemize}
-	\item Empat kamera yang terletak di bagian atas dan bawah headset untuk mendeteksi posisi headset dan tangan pengguna serta menangkap citra lingkungan sekitar, sebagaimana ditunjukkan pada Gambar 2.1.
+	\item Empat kamera yang terletak di bagian atas dan bawah headset untuk mendeteksi posisi headset dan tangan pengguna serta menangkap citra lingkungan sekitar, sebagaimana ditunjukkan pada Gambar ~\ref{fig:quest2}.
 	\item Layar internal yang berfungsi menampilkan dunia virtual.
-	\item Lensa yang membantu pengguna memfokuskan tampilan layar, seperti ditunjukkan pada Gambar 2.2.
-	\item Speaker yang menghasilkan audio dari lingkungan virtual.
+	\item Lensa yang membantu pengguna memfokuskan tampilan layar, seperti ditunjukkan pada Gambar ~\ref{fig:lenses}.
+	\item \textit{Speaker} yang menghasilkan audio dari lingkungan virtual.
 	\item Inertial Measurement Unit (IMU), yang merupakan kombinasi sensor gyroscope untuk mendeteksi orientasi kepala, accelerometer untuk mengukur arah dan kecepatan pergerakan, serta magnetometer yang berfungsi sebagai kompas untuk menentukan orientasi pengguna secara akurat.
 \end{itemize}
 
-Interaksi pengguna dalam Meta Quest 2 difasilitasi oleh dua buah controller, masing-masing digunakan pada tangan kiri dan kanan, sebagaimana ditunjukkan pada Gambar 2.3. Aplikasi pada Meta Quest 2 dapat diprogram untuk menerima berbagai masukan dan menghasilkan keluaran berdasarkan interaksi pengguna melalui controller tersebut. Posisi dan pergerakan controller dideteksi menggunakan kombinasi sensor IMU dan sensor inframerah.
-\section{Analisis Perbandingan Metode}
+\begin{figure}[h] % 'h' means place it here
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/metaquest2.jpg} % Adjust the path and filename as needed
+    \caption{Meta Quest 2 Headset dan Controllers}
+    \label{fig:quest2}
+\end{figure}
 
-Di dalam tinjauan pustaka hasil akhirnya adalah analisis secara kualitatif atau pun secara kuantitatif kelebihan dan kekurangan metode jika dikaitkan dengan masalah, batasan-batasan masalah dan solusi yang dinginkan. Analisis kuantitatif tidak wajib teapi mempunyai nilai tambah di dalam tugas akhir saudara. Bagian ini menjelaskan kenapa metode tersebut dipilih dan uraikan dengan lebih jelas metode pelaksanaan tugas akhir yang ingin Anda lakukan. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/metaquest2-backward.jpg} % Adjust the path and filename as needed
+	\caption{Lensa Meta Quest 2}
+	\label{fig:lenses}
+\end{figure}
 
-\section{Pertanyaan Tugas Akhir (Jika Perlu)}
+Interaksi pengguna dalam Meta Quest 2 difasilitasi oleh dua buah controller, masing-masing digunakan pada tangan kiri dan kanan, sebagaimana ditunjukkan pada Gambar ~\ref{fig:quest2} dan Gambar ~\ref{fig:lenses}. Aplikasi pada Meta Quest 2 dapat diprogram untuk menerima berbagai masukan dan menghasilkan keluaran berdasarkan interaksi pengguna melalui controller tersebut. Posisi dan pergerakan controller dideteksi menggunakan kombinasi sensor IMU dan sensor inframerah.
 
-Pertanyaan tugas akhir bersifat opsional dan dapat ditambahkan untuk menekankan hal-hal yang hendak diketahui dari tugas akhir berdasar pada tujuan tugas akhir. Pertanyaan tugas akhir dikenal dengan RQ (\textit{Research Question}) dan harus memiliki keterkaitan dengan RO (\textit{Research Objective}). Satu RO dapat memiliki satu atau lebih dari satu RQ. 
+\subsection{\textit{Game Engine} Unity \& XR Interaction Toolkit}
+
+Unity adalah sebuah \textit{game engine} yang menyediakan berbagai alat dan fitur untuk pengembangan aplikasi interaktif, termasuk aplikasi VR. Unity mendukung berbagai \textit{platform}, termasuk Android, yang memungkinkan pengembangan aplikasi untuk perangkat seperti Meta Quest 2. Unity juga memiliki ekosistem yang luas dengan banyak plugin dan sumber daya yang dapat digunakan untuk mempercepat proses pengembangan. Salah satu plugin yang relevan untuk pengembangan VR adalah XR Interaction Toolkit, yang menyediakan komponen dan sistem untuk mengelola interaksi pengguna dalam lingkungan VR, seperti deteksi gerakan tangan, interaksi dengan objek virtual, dan navigasi dalam dunia virtual. Dengan menggunakan Unity dan XR Interaction Toolkit, pengembang dapat dengan mudah membuat aplikasi VR yang imersif dan interaktif untuk pelatihan evakuasi kebakaran \cite{unityxrtoolkit2026}.
+
+\subsection{\textit{Fire Drill}}
+Latihan kebakaran (\textit{fire drill}) sangat penting untuk memastikan kesiapsiagaan dalam menyelamatkan diri dengan tenang dan cepat saat keadaan darurat terjadi. 
+Di universitas atau bangunan tinggi, latihan kebakaran biasanya mengikuti langkah-langkah berikut\cite{Zhang_Ding_Chraibi_Huang_2025}.
+\begin{enumerate}
+	\item Pemberitahuan : Sesi dimulai dengan bunyi alarm atau bel nyaring untuk memberi tahu semua orang di dalam gedung bahwa latihan kebakaran sedang berlangsung
+	\item Tindakan dan Keluar dari Ruangan : Penghuni menghentikan aktivitas yang dilakukan dan segera meninggalkan ruangan
+	\item Navigasi Titik-Titik Penting : Peserta latian diarahkan untuk bergerak melalui koridor dan tangga (karena penggunaan lift dilarang keras) untuk mencapai pintu keluar
+	\item Mencapai Area Aman : Latihan berakhir ketika semua peserta mencapai area aman atau titik kumpul yang telah ditentukan di luar gedung
+	\item Pengamatan dan Perekaman : Umumnya pola pergerakan dan lintasan yang diambil oleh peserta latihan dicatat untuk dianalisis kemudian, sehingga dapat digunakan untuk meningkatkan prosedur evakuasi di masa depan.
+\end{enumerate}
+Kegiatan \textit{fire drill} juga signifikan untuk memberikan pengalaman dan melatih penggunaan fasilitas-fasilitas keselamatan seperti tangga darurat, pintu keluar, dan alat pemadam kebakaran. \cite{Zhang_Ding_Chraibi_Huang_2025} juga menyorot dua aspek dari aktivitas yang berkaitan dengan alat pemadam yaitu familiarisasi peserta dalam penggunaan fasilitas, dan verifikasi bahwa fasilitas dapat diakses dan berfungsi dengan baik.
+
+\subsection{Navigasi dan Rute Evakuasi dalam Keadaan Darurat}
+Dalam situasi darurat seperti kebakaran, navigasi efektif dan pemilihan rute evakuasi yang tepat sangat penting untuk memastikan keselamatan semua individu yang terlibat. Namun, psikologi manusia dalam situasi darurat dapat mempengaruhi kemampuan mereka untuk membuat keputusan yang rasional dan memilih rute evakuasi yang optimal. \cite{Akter_Sultana_Hossain_Datta_Tutul_2026} menyoroti beberapa fakor psikologis dapat mempengaruhi perilaku evakuasi. Saat keadaan genting terjadi, individu cenderung pergi ke pintu keluar yang familiar walaupun rute yang perlu dilalui kurang optimal atau teralalu ramai. Sistem simulasi yang dikembangkan di \cite{Oikonomou_Boulougaris_Kolomvatsos_2025} juga menunjukkan bahwa rute-rute yang lebih pendek tidak menjamin keselamatan jika rute tersebut dipenuhi asap. Oleh karena itu, perutean ulang dilatih untuk memastikan bahwa individu dapat memilih rute evakuasi yang aman dan efektif.
+\subsection{Alat Pemadam Api Ringan {APAR}}
+Alat Pemadam Api Ringan (APAR) sangat penting sebagai langkah penanganan awal sebelum api semakin besar dan sulit dipadamkan. Namun, masih banyak yang menganggap APAR hanya dibutuhkan di fasilitas umum dan belum mengenali jenis-jenisnya. Oleh karena itu, edukasi mengenai APAR dibutuhkan.
+
+APAR adalah suatu perangkat pemadam api berbentuk tabung dengan bobot maksimum sekitar 16 kg yang dirancang agar mudah digunakan oleh petugas maupun orang awam dalam kondisi darurat. Alat ini berperan penting dalam memadamkan api berskala kecil pada saat awal terjadinya kebakaran. Dengan penanganan cepat menggunakan APAR, potensi penyebaran dapat dicegah sehingga kerusakan dan risiko tidak kian meluas. Ketika kebakaran terjadi, setiap detik berharga. Oleh karena itu, penggunaan APAR sangat diperlukan. 
+
+\subsection{Gamifikasi}
+Gamifikasi merujuk pada implementasi strategis beberapa prinsip, mekanik, dan elemen desain permainan ke da;am lingkungan non-permainan. Tujuannya adalah menelesaikan masalah, meningkatkan keterlibatan, dan memotivasi individu untuk mencapai tujuan tertentu. Gamifikasi menciptakan pengalaman interaktif yang meningkatkan rasa kemandirian, kompetensi, dan keterikatan pengguna \cite{Christopoulos_Mystakidis_2023}. Dalam \textit{serious game}, gamifikasi penting untuk meningkatkan retensi dan motivasi peserta pelatihan.  Implementasi dari fitur-fitur gamifikasi umumnya meliputi sistem poin, lencana, papan peringkat, tantangan, dan narasi yang menarik. 
+
+\subsection{\textit{Feature-driven Development} (FDD)}
+FDD didefinisikan sebagai model pengembangan \textit{software} yang berfokus pada aspek perancangan dan pembangunan berdasarkan fitur-ffitur yang bernilai. FDD cocok untuk proyek dengan kebutuhan kompleks dan persyaratan yang relatif stabil. 
+FDD terdiri dari lima tahapan utama, yaitu:
+\begin{enumerate}		
+\item \textit{Develop an overall model} : menentukan konteks dan ruang lingkup proyek
+\item \textit{Build a features list} : mengidentifikasi dan menyusun fitur-fitur yang diperlukan untuk memenuhi kebutuhan pengguna
+\item \textit{Plan by feature} : merencanakan pengembangan fitur-fitur berdasarkan prioritas dan ketergantungan antar fitur
+\item \textit{Design by feature} : merancang fitur-fitur secara detail, termasuk pembuatan diagram dan kelas
+\item \textit{Build by feature} : mengimplementasikan fitur-fitur secara iteratif, dengan setiap iterasi menghasilkan fitur yang dapat digunakan dan diuji  \cite{Aftab_Nawaz_Anwer_Ahmad_Iqbal_Ahmad_Salman_2019}.
+\end{enumerate}
+
+FDD digunakan untuk pengembangan permainan ini karena memungkinkan pengembangan terstruktur berdasarkan fitur-fitur yang telah dirancang sehingga memudahkan dalam perencanaan, desain, dan implementasi permainan secara iteratif. Dengan menggunakan FDD, pengembangan permainan dapat dilakukan secara sistematis dan terorganisir sehingga memastikan bahwa setiap fitur yang dikembangkan sesuai dengan kebutuhan pengguna dan tujuan pelatihan yang diinginkan.
+\subsection{MDA \textit{Framework}}
+MDA merupakan sebuah kerangka kerja atau pendekatan formal untuk memahami permainan dengan menjembatani kesejangan antara desain permainan, pengembangan, kritik, dan penelitian teknis.
+MDA terdiri dari tiga komponen utama, yaitu:
+\begin{itemize}
+	\item \textit{Mechanics} : Merupakan aturan dan sistem yang mendasari permainan, termasuk algoritma, data struktur, dan logika yang mengatur bagaimana permainan berfungsi. Dalam gamifikasi, mekanik mencakup elemen-elemen seperti sistem poin, lencana, papan peringkat, tantangan, dan narasi yang menarik.
+	\item \textit{Dynamics} : Merupakan perilaku yang muncul dari interaksi antara mekanik permainan dan pemain. Dinamika mencakup pola-pola yang muncul selama permainan berlangsung, seperti strategi, taktik, dan interaksi sosial.
+	\item \textit{Aesthetics} : Merupakan respons emosional dan estetika yang dirasakan oleh pemain saat bermain. \textit{Aesthetics} mencakup aspek-aspek seperti kesenangan, tantangan, keterlibatan, dan kepuasan yang diperoleh dari bermain permainan \cite{Hunicke_LeBlanc_Zubek_2004}.
+\subsection{VRSUQ}
+
+\subsection{SUS}
+
+\
+% \section{Analisis Perbandingan Metode}
+
+% Di dalam tinjauan pustaka hasil akhirnya adalah analisis secara kualitatif atau pun secara kuantitatif kelebihan dan kekurangan metode jika dikaitkan dengan masalah, batasan-batasan masalah dan solusi yang dinginkan. Analisis kuantitatif tidak wajib teapi mempunyai nilai tambah di dalam tugas akhir saudara. Bagian ini menjelaskan kenapa metode tersebut dipilih dan uraikan dengan lebih jelas metode pelaksanaan tugas akhir yang ingin Anda lakukan. 
+
+% \section{Pertanyaan Tugas Akhir (Jika Perlu)}
+
+% Pertanyaan tugas akhir bersifat opsional dan dapat ditambahkan untuk menekankan hal-hal yang hendak diketahui dari tugas akhir berdasar pada tujuan tugas akhir. Pertanyaan tugas akhir dikenal dengan RQ (\textit{Research Question}) dan harus memiliki keterkaitan dengan RO (\textit{Research Objective}). Satu RO dapat memiliki satu atau lebih dari satu RQ. 
 
